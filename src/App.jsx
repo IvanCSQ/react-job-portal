@@ -1,5 +1,11 @@
-const App = () => {
-  return <div className='text-5xl'>App</div>;
-};
+import Navbar from './components/Navbar'
 
-export default App;
+const App = () => {
+  return (
+    <>
+      <Navbar />
+    </>
+  )
+}
+
+export default App
