@@ -1,3 +1,5 @@
+// <a> tag will be replaced with <Link> tag to prevent page reload
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
@@ -6,33 +8,33 @@ const Navbar = () => {
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            <a
+            <Link
               className="flex flex-shrink-0 items-center mr-4"
-              href="/index.html">
+              to="/">
                 <img
                   className='h-10 w-auto'
                   src={ logo } alt="React Logo" />
                   <span className='hidden md:block text-white text-2xl font-bold ml-2'>
                     React Jobs
                   </span>
-              </a>
+              </Link>
               <div className='md:ml-auto'>
                 <div className='flex space-x-2'>
-                  <a
+                  <Link
                     className='text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-                    href="/index.html">
+                    to="/">
                     Home
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className='text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-                    href="/job.html">
+                    to="/jobs">
                     Jobs
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className='text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-                    href="/add-job.html">
+                    to="/add-job">
                     Add Job
-                  </a>
+                  </Link>
                 </div>
               </div>
           </div>
