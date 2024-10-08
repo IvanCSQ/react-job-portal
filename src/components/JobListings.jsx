@@ -15,9 +15,13 @@ const JobListings = ( { isHome = false }) => {
   useEffect(() => {
     // declare async function called fetchJobs to fetch data from server
     const fetchJobs = async () => {
+      const apiUrl = isHome
+        ? '/api/jobs?_limit=3'
+        : '/api/jobs';
+
       try {
         // try to make a request to the server
-        const res = await fetch('http://localhost:8000/jobs');
+        const res = await fetch(apiUrl);
         // parse the response into json format and store it in data variable
         const data = await res.json();
         // update state with the fetched jobs data
