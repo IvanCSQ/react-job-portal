@@ -1,8 +1,25 @@
-# React + Vite
+React Job Portal Project
+![alt text](screenshot_browser.png)
+![alt text](screenshot_sm.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Tailwind CSS
+- react-icon
+- JSON Server (mock API)
+- react-toastify
 
-Currently, two official plugins are available:
+Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install Dependencies
+npm install
+
+To Run JSON Server - http://localhost:8000/jobs
+npm run server
+
+To Run Vite Frontend - http://localhost:3000
+npm run dev
+
+Build for production
+npm run build
+
+Preview Production Build
+npm run preview
