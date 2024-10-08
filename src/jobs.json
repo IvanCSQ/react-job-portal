@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "44df",
+      "title": "Test job",
+      "type": "Part-time",
+      "location": "chinatown",
+      "description": "just to test is it working",
+      "salary": "Over $200K",
+      "company": {
+        "name": "tester",
+        "description": "good company with 996 working style",
+        "companyEmail": "test@email.com",
+        "companyPhone": "1111 2222"
+      }
     }
   ]
 }
