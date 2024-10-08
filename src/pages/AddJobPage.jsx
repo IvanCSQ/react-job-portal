@@ -1,6 +1,7 @@
 import { useState } from 'react';
 // to navigate to job page after submit the form of adding new job
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 const AddJobPage = ( { addJobSubmit } ) => {
   const [title, setTitle] = useState('');
@@ -10,8 +11,8 @@ const AddJobPage = ( { addJobSubmit } ) => {
   const [salary, setSalary] = useState('Under $50K');
   const [companyName, setCompanyName] = useState('');
   const [companyDescription, setCompanyDescription] = useState('');
-  const [companyEmail, setCompanyEmail] = useState('');
-  const [companyPhone, setCompanyPhone] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactPhone, setContactPhone] = useState('');
 
   // declare navigate function
   const navigate = useNavigate();
@@ -28,12 +29,14 @@ const AddJobPage = ( { addJobSubmit } ) => {
       company: {
         name: companyName,
         description: companyDescription,
-        companyEmail,
-        companyPhone
+        contactEmail,
+        contactPhone
       }
     };
 
     addJobSubmit(newJob);
+
+    toast.success('Job added successfully');
 
     // navigate to jobs page after submit the form
     // return to end of this function
@@ -208,8 +211,8 @@ const AddJobPage = ( { addJobSubmit } ) => {
                 className='border rounded w-full py-2 px-3 mb-2'
                 placeholder='Email address for applicants'
                 required
-                value={companyEmail}
-                onChange={(e) => setCompanyEmail(e.target.value)}
+                value={contactEmail}
+                onChange={(e) => setContactEmail(e.target.value)}
               />
             </div>
 
@@ -226,8 +229,8 @@ const AddJobPage = ( { addJobSubmit } ) => {
                 name='contact_phone'
                 className='border rounded w-full py-2 px-3 mb-2'
                 placeholder='Optional phone for applicants'
-                value={companyPhone}
-                onChange={(e) => setCompanyPhone(e.target.value)}
+                value={contactPhone}
+                onChange={(e) => setContactPhone(e.target.value)}
               />
             </div>
 
