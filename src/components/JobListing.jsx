@@ -50,7 +50,7 @@ const JobListing = ({ job }) => {
                   </div>
 
                   <Link
-                    to={`/job/${job.id}`}
+                    to={`/jobs/${job.id}`}
                     className='bg-indigo-500 text-white px-4 py-2 rounded-lg text-center text-sm hover:bg-indigo-600'
                   >
                     Read More
